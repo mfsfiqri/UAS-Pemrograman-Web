@@ -1,0 +1,184 @@
+###
+POST http://localhost:5000/categories
+Content-Type: application/json
+
+{
+    "name": "Makanan"
+}
+
+###
+POST http://localhost:5000/categories
+Content-Type: application/json
+
+{
+    "name": "Minuman"
+}
+
+###
+GET http://localhost:5000/categories
+
+###
+PATCH  http://localhost:5000/categories/2
+Content-Type: application/json
+
+{
+    "name": "Categories 02 update",
+}
+
+###
+DELETE  http://localhost:5000/categories/1
+
+###
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name": "Coklat",
+    "price": 20000,
+    "qty": 5,
+    "categoryId": 1
+}
+
+###
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name": "Keju",
+    "price": 25000,
+    "qty": 7,
+    "categoryId": 1
+}
+
+###
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name": "Teh Kotak",
+    "price": 6000,
+    "qty": 10,
+    "categoryId": 2
+}
+
+###
+GET http://localhost:5000/products
+
+###
+GET http://localhost:5000/products/1
+
+###
+PATCH  http://localhost:5000/products/2
+Content-Type: application/json
+
+{
+    "name": "Product 02 update",
+    "price": 30000
+}
+
+###
+DELETE  http://localhost:5000/products/1
+
+###
+POST http://localhost:5000/supplier
+Content-Type: application/json
+
+{
+    "name": "Fiqri",
+    "alamat": "Bandung"
+}
+
+###
+POST http://localhost:5000/supplier
+Content-Type: application/json
+
+{
+    "name": "Saif",
+    "alamat": "Jakarta"
+}
+
+###
+PATCH  http://localhost:5000/supplier/2
+Content-Type: application/json
+
+{
+    "name": "supplier 02 update",
+}
+
+###
+DELETE  http://localhost:5000/supplier/1
+
+###
+GET http://localhost:5000/supplier
+
+###
+POST http://localhost:5000/sales
+Content-Type: application/json
+
+{
+    "productId": 1,
+    "qty": 2,
+    "total": 40000
+}
+
+###
+POST http://localhost:5000/sales
+Content-Type: application/json
+
+{
+    "productId": 2,
+    "qty": 1,
+    "total": 25000
+}
+
+###
+PATCH  http://localhost:5000/sales/2
+Content-Type: application/json
+
+{
+    "qty": 2,
+    "total": 50000
+}
+
+###
+DELETE  http://localhost:5000/sales/1
+
+###
+GET http://localhost:5000/sales
+
+###
+POST http://localhost:5000/purchase
+Content-Type: application/json
+
+{
+    "supplierId": 1,
+    "productId": 1,
+    "qty": 1,
+    "total": 20000
+}
+
+###
+POST http://localhost:5000/purchase
+Content-Type: application/json
+
+{
+    "supplierId": 2,
+    "productId": 2,
+    "qty": 2,
+    "total": 40000
+}
+
+###
+PATCH  http://localhost:5000/purchase/1
+Content-Type: application/json
+
+{
+    "qty": 3,
+    "total": 50000
+}
+
+###
+DELETE  http://localhost:5000/purchase/1
+
+###
+GET http://localhost:5000/purchase
